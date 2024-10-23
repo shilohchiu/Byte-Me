@@ -1,5 +1,19 @@
 # About
-Utilises deep learning with TensorFlow to classify moles as malignant or benign.
+ Our group was interested in how deep learning can improve the accessibility of healthcare.
+## Hardware:
+
+ Screen (doesn't need to be a touch screen.)
+ Camera 
+
+ 3D printed case.
+
+## Software:
+
+ deep learning with TensorFlow to classify moles as malignant or benign.
+
+We use **Flask** to create an app that stores previous screenings and display results of screenings as well as live footage recorded by our camera.
+
+
 # Ideas
 - Flask App to display results
 - Transfer image to SQL db ?
