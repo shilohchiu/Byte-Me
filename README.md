@@ -23,6 +23,7 @@ source env/bin/activate : activate the virtual environment w/ needed dependencie
 export FLASK_APP=app.py
 flask run --host=0.0.0.0
 # Sources
+- https://keras.io/api/layers/convolution_layers/convolution2d/
 - Connecting Jupyter Notebook on Raspberry Pi:
 https://www.instructables.com/Jupyter-Notebook-on-Raspberry-Pi/
 - Installing TensorFlow 2 on Raspberry Pi:
@@ -38,3 +39,7 @@ https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign
 - Connecting TensorFlow to RPi: https://www.reddit.com/r/raspberry_pi/comments/lms6mq/deploying_deep_learning_models_on_raspberry_pi_4_b/
 - Visual Studio and Git tutorials
 https://superuser.com/questions/1423443/using-visual-studio-and-git-how-do-i-commit-a-new-folder-to-my-git-repository
+- Replace depracated module
+https://peps.python.org/pep-0594/#imghdr
+https://docs.ultralytics.com/guides/model-training-tips/#early-stopping
+https://machinelearningmastery.com/how-to-stop-training-deep-neural-networks-at-the-right-time-using-early-stopping/
