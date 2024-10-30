@@ -1,13 +1,16 @@
 # Table of Contents
 
 1. [Project Overview](#project-overview)
+  * [Goal](##goal)
+  * [Hardware](##hardware)
+  * 
 2. 
 3. 
 
 # Project Overview
 ## Goal
  We designed a prototype of a melanoma detection device using Raspberry Pi 4 and a CNN model built in Tensorflow.
-## Hardware:
+## Hardware
 
  Screen (doesn't need to be a touch screen.)
  Camera 
@@ -25,10 +28,12 @@ We use **Flask** to create an app that stores previous screenings and display re
 - Flask App to display results
 - Transfer image to SQL db ?
 # Important commands
-source env/bin/activate : activate the virtual environment w/ needed dependencies in the directory titled final
+
+`source env/bin/activate`
+activate the virtual environment w/ needed dependencies in the directory titled final
 - Set up the web-app:
-export FLASK_APP=app.py
-flask run --host=0.0.0.0
+`export FLASK_APP=app.py`
+`flask run --host=0.0.0.0`
 # Sources
 - https://keras.io/api/layers/convolution_layers/convolution2d/
 - Connecting Jupyter Notebook on Raspberry Pi:
