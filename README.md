@@ -1,5 +1,12 @@
-# About
- Our group was interested in how deep learning can improve the accessibility of healthcare.
+# Table of Contents
+
+1. [Project Overview](#project-overview)
+2. 
+3. 
+
+# Project Overview
+## Goal
+ We designed a prototype of a melanoma detection device using Raspberry Pi 4 and a CNN model built in Tensorflow.
 ## Hardware:
 
  Screen (doesn't need to be a touch screen.)
