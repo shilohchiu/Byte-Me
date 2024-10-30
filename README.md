@@ -22,7 +22,6 @@
    ## Software
 
     Deep learning with TensorFlow to classify moles as malignant or benign.
-
    We use **Flask** to create an app that stores previous screenings and display results of screenings as well as live footage recorded by our camera.
 
 
@@ -33,23 +32,21 @@
 # Documentation
 
 ## Terminal commands
-`source env/bin/activate`
-activate the virtual environment w/ needed dependencies in the directory titled final
+- Create a virtual environment with `source env/bin/activate`. Make sure that the directory of the virtual environment is correct.
+- Then, `pip install tensorflow`
+
 - Set up the web-app:
 `export FLASK_APP=app.py`
 `flask run --host=0.0.0.0`
 # Sources
 | Description | Source |
 |-----|-----|
-|Information about how convolution neural networks work.|https://keras.io/api/layers/convolution_layers/convolution2d/|
-Connecting Jupyter Notebook on Raspberry Pi:
-https://www.instructables.com/Jupyter-Notebook-on-Raspberry-Pi/
-- Installing TensorFlow 2 on Raspberry Pi:
-I used a combination of these sources to debug issues I was having with installing Tensorflow on my Raspberry Pi.
-Finally installed it with a pip install tensorflow in my virtual environment after installing needed dependencies.
+| Information about how convolution neural networks work. | https://keras.io/api/layers/convolution_layers/convolution2d/|
+| Install Jupyter Notebook onto Raspberry Pi | https://www.instructables.com/Jupyter-Notebook-on-Raspberry-Pi/ |
+| Installing TensorFlow 2 on Raspberry Pi |
 - https://www.youtube.com/watch?v=FkMWfd9KygA&ab_channel=Engineering_life
 - https://www.youtube.com/watch?v=QLZWQlg-Pk0&ab_channel=SamWestbyTech
-- https://qengineering.eu/install-tensorflow-on-raspberry-64-os.html
+- https://qengineering.eu/install-tensorflow-on-raspberry-64-os.html 
 - Useful Image Classification with TensorFlow Tutorial: 
 https://www.youtube.com/watch?v=jztwpsIzEGc&ab_channel=NicholasRenotte I used this tutorial to figure out how to build an image classification system.
 - Dataset:
