@@ -43,10 +43,7 @@
 |-----|-----|
 | Information about how convolution neural networks work. | https://keras.io/api/layers/convolution_layers/convolution2d/|
 | Install Jupyter Notebook onto Raspberry Pi | https://www.instructables.com/Jupyter-Notebook-on-Raspberry-Pi/ |
-| Installing TensorFlow 2 on Raspberry Pi |
-- https://www.youtube.com/watch?v=FkMWfd9KygA&ab_channel=Engineering_life
-- https://www.youtube.com/watch?v=QLZWQlg-Pk0&ab_channel=SamWestbyTech
-- https://qengineering.eu/install-tensorflow-on-raspberry-64-os.html 
+| Installing TensorFlow 2 on Raspberry Pi | - https://www.youtube.com/watch?v=FkMWfd9KygA&ab_channel=Engineering_life - https://www.youtube.com/watch?v=QLZWQlg-Pk0&ab_channel=SamWestbyTech - https://qengineering.eu/install-tensorflow-on-raspberry-64-os.html |
 - Useful Image Classification with TensorFlow Tutorial: 
 https://www.youtube.com/watch?v=jztwpsIzEGc&ab_channel=NicholasRenotte I used this tutorial to figure out how to build an image classification system.
 - Dataset:
