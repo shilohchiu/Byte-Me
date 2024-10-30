@@ -56,7 +56,7 @@
 |-----|-----|
 | Image dataset | https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign |
 ## Other Sources
-|-----|-----|
 | Description | Source |
+|-----|-----|
 | Git in Visual Studio Code | https://superuser.com/questions/1423443/using-visual-studio-and-git-how-do-i-commit-a-new-folder-to-my-git-repository |
 | Replace depracated module | https://peps.python.org/pep-0594/#imghdr |
