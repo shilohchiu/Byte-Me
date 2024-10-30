@@ -1,42 +1,48 @@
 # Table of Contents
 
-1. [Project Overview](#project-overview)
-   a. [Goal](##goal)
-   b. [Hardware](##hardware)
-   c. 
-2. 
-3. 
+- [Table of Contents](#table-of-contents)
+- [Project Overview](#project-overview)
+  - [Goal](#goal)
+  - [Hardware](#hardware)
+  - [Software](#software)
+- [Ideas](#ideas)
+- [Documentation](#documentation)
+  - [Terminal commands](#terminal-commands)
+- [Sources](#sources)
 
 # Project Overview
-## Goal
- We designed a prototype of a melanoma detection device using Raspberry Pi 4 and a CNN model built in Tensorflow.
-## Hardware
+   ## Goal
+    We designed a prototype of a melanoma detection device using Raspberry Pi 4 and a CNN model built in Tensorflow. Our prototype was designed with the intention of making an inexpensive and easy-to-use product.
+   ## Hardware
+    - Screen (doesn't need to be a touch screen.)
+    - Camera 
 
- Screen (doesn't need to be a touch screen.)
- Camera 
+    3D printed case.
 
- 3D printed case.
+   ## Software
 
-## Software:
+    Deep learning with TensorFlow to classify moles as malignant or benign.
 
- deep learning with TensorFlow to classify moles as malignant or benign.
-
-We use **Flask** to create an app that stores previous screenings and display results of screenings as well as live footage recorded by our camera.
+   We use **Flask** to create an app that stores previous screenings and display results of screenings as well as live footage recorded by our camera.
 
 
 # Ideas
 - Flask App to display results
 - Transfer image to SQL db ?
-# Important commands
+- 
+# Documentation
 
+## Terminal commands
 `source env/bin/activate`
 activate the virtual environment w/ needed dependencies in the directory titled final
 - Set up the web-app:
 `export FLASK_APP=app.py`
 `flask run --host=0.0.0.0`
 # Sources
-- https://keras.io/api/layers/convolution_layers/convolution2d/
-- Connecting Jupyter Notebook on Raspberry Pi:
+| Description | Source |
+|-----|-----|
+|Information about how convolution neural networks work.|https://keras.io/api/layers/convolution_layers/convolution2d/|
+Connecting Jupyter Notebook on Raspberry Pi:
 https://www.instructables.com/Jupyter-Notebook-on-Raspberry-Pi/
 - Installing TensorFlow 2 on Raspberry Pi:
 I used a combination of these sources to debug issues I was having with installing Tensorflow on my Raspberry Pi.
