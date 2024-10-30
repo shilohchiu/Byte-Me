@@ -1,9 +1,9 @@
 # Table of Contents
 
 1. [Project Overview](#project-overview)
-  * [Goal](##goal)
-  * [Hardware](##hardware)
-  * 
+   a. [Goal](##goal)
+   b. [Hardware](##hardware)
+   c. 
 2. 
 3. 
 
