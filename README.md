@@ -7,7 +7,11 @@
   - [Software](#software)
 - [Ideas](#ideas)
 - [Documentation](#documentation)
+  - [Directories and Files](#directories-and-files)
   - [Terminal commands](#terminal-commands)
+    - [Install Necessary Modules](#install-necessary-modules)
+    - [Steps for checking if tensorflow is correctly installed on RPi](#steps-for-checking-if-tensorflow-is-correctly-installed-on-rpi)
+    - [Setting up the web app](#setting-up-the-web-app)
 - [Sources](#sources)
   - [Deep Learning Sources](#deep-learning-sources)
   - [Flask Sources](#flask-sources)
@@ -29,13 +33,20 @@
 - Transfer image to SQL db ?
 - 
 # Documentation
-
+## Directories and Files
+- the **final** directory acts as a backup for exactly what is on the RPi. It is updated occasionally in case the RPi is somehow corrupted.
+- 
 ## Terminal commands
-- Create a virtual environment with `source env/bin/activate`. Make sure that the directory of the virtual environment is correct.
-- The command I used while writing / testing in VSCode was `conda activate myenv` to activate the environment in anaconda.
-- Then, `pip install tensorflow`
-
-- Set up the web-app:
+### Install Necessary Modules
+- **Tensorflow:** `pip install tensorflow`
+- **OpenCV:** `pip install opencv-python==4.5.3.56`
+- **Matplotlib:** `pip install matplotlib`
+### Steps for checking if tensorflow is correctly installed on RPi
+- activate the virtual environment: `source env/bin/activate`. Make sure that the directory of the virtual environment is correct. (The command I used while writing / testing in VSCode was `conda activate myenv` to activate the environment in anaconda.)
+- To install Tensorflow, make sure that the virtual environment is activated. Then, `pip install tensorflow`.
+- Enter python using `python3`.
+- `import tensorflow as tf` and `print(tf.__version__)`. THe version should be 2.17.0
+### Setting up the web app
 `export FLASK_APP=app.py`
 `flask run --host=0.0.0.0`
 # Sources
@@ -59,3 +70,4 @@
 |-----|-----|
 | Git in Visual Studio Code | https://superuser.com/questions/1423443/using-visual-studio-and-git-how-do-i-commit-a-new-folder-to-my-git-repository |
 | Replace depracated module | https://peps.python.org/pep-0594/#imghdr |
+| Installing OpenCV | https://raspberrypi-guide.github.io/programming/install-opencv |
