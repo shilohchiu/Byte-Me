@@ -16,6 +16,7 @@
 - [Sources](#sources)
   - [Deep Learning Sources](#deep-learning-sources)
   - [Flask Sources](#flask-sources)
+  - [Camera Sources](#camera-sources)
   - [Data Sources](#data-sources)
   - [Other Sources](#other-sources)
 
@@ -64,6 +65,10 @@
 | Early stopping in Tensorflow | https://docs.ultralytics.com/guides/model-training-tips/#early-stopping https://machinelearningmastery.com/how-to-stop-training-deep-neural-networks-at-the-right-time-using-early-stopping/ |
 ## Flask Sources
 | Flask image input | https://stackoverflow.com/questions/44926465/upload-image-in-flask |
+## Camera Sources
+| Description | Source |
+|-----|-----|
+| Troubleshooting | https://forums.raspberrypi.com/viewtopic.php?t=368673 |
 ## Data Sources
 | Description | Source |
 |-----|-----|
