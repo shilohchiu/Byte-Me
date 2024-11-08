@@ -10,6 +10,7 @@
   - [Directories and Files](#directories-and-files)
   - [Terminal commands](#terminal-commands)
     - [Install Necessary Modules](#install-necessary-modules)
+    - [Camera commands](#camera-commands)
     - [Steps for checking if tensorflow is correctly installed on RPi](#steps-for-checking-if-tensorflow-is-correctly-installed-on-rpi)
     - [Setting up the web app](#setting-up-the-web-app)
 - [Sources](#sources)
@@ -41,6 +42,8 @@
 - **Tensorflow:** `pip install tensorflow`
 - **OpenCV:** `pip install opencv-python==4.5.3.56`
 - **Matplotlib:** `pip install matplotlib`
+### Camera commands
+- Take a picture: `libcamera-still -o [/path/to/file].jpg` (make sure that the filename/path does not include brackets)
 ### Steps for checking if tensorflow is correctly installed on RPi
 - activate the virtual environment: `source env/bin/activate`. Make sure that the directory of the virtual environment is correct. (The command I used while writing / testing in VSCode was `conda activate myenv` to activate the environment in anaconda.)
 - To install Tensorflow, make sure that the virtual environment is activated. Then, `pip install tensorflow`.
