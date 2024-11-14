@@ -2,10 +2,10 @@
 
 - [Table of Contents](#table-of-contents)
 - [Project Overview](#project-overview)
+  - [Team](#team)
   - [Goal](#goal)
   - [Hardware](#hardware)
   - [Software](#software)
-- [Ideas](#ideas)
 - [Documentation](#documentation)
   - [Directories and Files](#directories-and-files)
   - [Terminal commands](#terminal-commands)
@@ -21,19 +21,20 @@
   - [Other Sources](#other-sources)
 
 # Project Overview
+   ## Team
+   - **Lead Developer**: Shiloh Chiu
+   - **Project Manager**: Sophie Rummler
+   - **Hardware Technician**: Emily Sturgill
    ## Goal
-    We designed a prototype of a melanoma detection device using Raspberry Pi 4 and a CNN model built in Tensorflow. Our prototype was designed with the intention of making an inexpensive and easy-to-use product.
+    Our aim was to explore how advancements in deep learning can contribute to the biomedical field. To do this, we designed a prototype of a melanoma detection device using the Raspberry Pi 4 and a CNN model built in Tensorflow. Our prototype was designed with the intention of making a product that is both inexpensive and easy-to-use.
    ## Hardware
-    - Screen (doesn't need to be a touch screen.)
-    - Camera 
-    - 3D printed case.
+    - Screen:
+    - Camera:
+    - 3D printed case
    ## Software
-    Deep learning with TensorFlow to classify moles as malignant or benign.
-   We use **Flask** to create an app that stores previous screenings and display results of screenings as well as live footage recorded by our camera.
-# Ideas
-- Flask App to display results
-- Transfer image to SQL db ?
-- 
+   - Deep learning with **TensorFlow** to classify moles as malignant or benign.
+   - **Flask** to create an app that stores previous screenings and display results of screenings as well as live footage recorded by our camera.
+
 # Documentation
 ## Directories and Files
 - the **final** directory acts as a backup for exactly what is on the RPi. It is updated occasionally in case the RPi is somehow corrupted.
