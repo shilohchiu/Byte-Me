@@ -18,6 +18,10 @@ import classify
 
 app = Flask(__name__)
 
+n = 0 # this serves as an iterator that 
+	  # helps name images that are taken
+	  # and passed to the learning model
+
 #loading the model
 model = load_model(os.path.join('models','melanomamodel.h5'))
 model.compile('adam', loss = tf.losses.BinaryCrossentropy(), metrics = ['accuracy'])
@@ -45,18 +49,43 @@ def index():
 @app.route('/capture', methods=['POST'])
 def capture():
 	# set the image path to a specific iteration
+	global n
 	image_path = f"static/images/{n}.jpg"
 	n += 1
+	# set the text of the button to taking picture... please keep the device still...
 	# actually take the image
 	os.system("libcamera-still -o " + image_path)
 
 	with open(image_path, 'rb') as preview:
 		x = (b'--frame\r\n'
 			b'Content-Type: image/jpeg\r\n\r\n' + preview.read() + b'\r\n')
-	return Response(x, minetype='multiport/x-mixed-replace; boundary=frame')
+	return Response(x, mimetype='multiport/x-mixed-replace; boundary=frame')
 	# return "ok"
 
-# 	return redirect(url_for('process_image'))
+# The function capture is the function that runs when the 
+# capture button is clicked. it is responsible for taking 
+# pictures with the camera sensor and returns the most 
+# recently taken image ready for display as a binary 
+# string.
+@app.route('/capture', methods=['POST'])
+def capture():
+	# set the image path to a specific iteration
+	global n
+	image_path = f"static/images/{n}.jpg"
+	n += 1
+	# set the text of the button to taking picture... please keep the device still...
+
+	# actually take the image
+	os.system("libcamera-still -o " + image_path)
+
+	with open(image_path, 'rb') as preview:
+		x = (b'--frame\r\n'
+			b'Content-Type: image/jpeg\r\n\r\n' + preview.read() + b'\r\n')
+		
+	# image text returns to normal
+
+	return Response(x, mimetype='multiport/x-mixed-replace; boundary=frame')
+	# return "ok"
 
 # @app.route('/classify') # used to be process
 # def classify_image():
@@ -75,8 +104,5 @@ def capture():
 
 # executable function
 if __name__ == '__main__':
-	n = 0 # this serves as an iterator that 
-	  # helps name images that are taken
-	  # and passed to the learning model
-	  
+	
 	app.run(host='0.0.0.0', port=5000, debug=True)
