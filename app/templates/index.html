@@ -23,28 +23,30 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Byte Me</h1>
+		<h1>Melanoma Detection Model</h1>
 
-		<!-- <h2>Live Camera Feed</h2>
-		<img id="live-feed" src="{{ url_for('video_feed') }}" width="640" height="480" alt="Live Feed"> -->
+			<h2>{{message}}</h2> <!-- have this say "try taking a picture! until a picture is taken and replaces it. "-->
+			<!-- <img id="live-feed" src="{{ url_for('video_feed') }}" width="640" height="480" alt="Your image here."> -->
 
-		<h2>Capture and Classify</h2>
-		<form action="{{ url_for('capture_image') }}" method="post">
-			<button type="submit">Capture and Classify</button>
-		</form>
-		{% if result %}
+			<h2>Capture and Classify</h2>
+			<button id = "capture"> Take a Picture! </button>
+
+			<h2>Classify</h2>
+
+			<!-- {% if result %}
+			
 			<h2>Result</h2>
-			<p>{{ result }}</p>
+				<p>{{ result }}</p>
 
-		{% endif %}
+			{% endif %} -->
 
 		<div class="log">
 			<h3>Past Screenings</h3>
-			<ul>
+			<!-- <ul>
 				{% for entry in log %}
 					<li>{{ entry }}</li>
 				{% endfor %}
-			</ul>
+			</ul> -->
 		</div>
 	</div>
 </body>

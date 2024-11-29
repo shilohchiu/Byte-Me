@@ -15,7 +15,7 @@ def load_model():
 
 
 # load_image is a function that takes a string input 
-# that represents the iamge path of a target file and 
+# that represents the image path of a target file and 
 # prepares it for use by the learning model. 
 # load_image returns the image in a format that can 
 # be used by the learning model.
