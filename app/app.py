@@ -46,22 +46,6 @@ def index():
 						log=read_log(),
 						message = "Try taking a picture!")
 
-@app.route('/capture', methods=['POST'])
-def capture():
-	# set the image path to a specific iteration
-	global n
-	image_path = f"static/images/{n}.jpg"
-	n += 1
-	# set the text of the button to taking picture... please keep the device still...
-	# actually take the image
-	os.system("libcamera-still -o " + image_path)
-
-	with open(image_path, 'rb') as preview:
-		x = (b'--frame\r\n'
-			b'Content-Type: image/jpeg\r\n\r\n' + preview.read() + b'\r\n')
-	return Response(x, mimetype='multiport/x-mixed-replace; boundary=frame')
-	# return "ok"
-
 # The function capture is the function that runs when the 
 # capture button is clicked. it is responsible for taking 
 # pictures with the camera sensor and returns the most 
