@@ -37,22 +37,27 @@
 # Documentation
 ## Directories and Files
 - the **final** directory acts as a backup for exactly what is on the RPi. It is updated occasionally in case the RPi is somehow corrupted.
-- 
 ## Terminal commands
 ### Install Necessary Modules
 - **Tensorflow:** `pip install tensorflow`
 - **OpenCV:** `pip install opencv-python==4.5.3.56`
 - **Matplotlib:** `pip install matplotlib`
+- **Flask-BasicAuth:** `pip install Flask-BasicAuth`
 ### Camera commands
 - Take a picture: `libcamera-still -o [/path/to/file].jpg` (make sure that the filename/path does not include brackets)
+- What you can do with libcamera-vid:`libcamera-vid --help`
+- Displays a video preview window for 10 seconds: `libcamera-vid -t 10000`
 ### Steps for checking if tensorflow is correctly installed on RPi
 - activate the virtual environment: `source env/bin/activate`. Make sure that the directory of the virtual environment is correct. (The command I used while writing / testing in VSCode was `conda activate myenv` to activate the environment in anaconda.)
 - To install Tensorflow, make sure that the virtual environment is activated. Then, `pip install tensorflow`.
 - Enter python using `python3`.
-- `import tensorflow as tf` and `print(tf.__version__)`. THe version should be 2.17.0
+- `import tensorflow as tf` and `print(tf.__version__)`. The version should be 2.17.0
 ### Setting up the web app
-`export FLASK_APP=app.py`
-`flask run --host=0.0.0.0`
+- Set up the virtual environment with `source env/bin/activate`
+- First, cd into the app directory (cd app).
+- `export FLASK_APP=app.py`
+- `flask run --host=0.0.0.0`
+- Run `` in the browser.
 # Sources
 ## Deep Learning Sources
 | Description | Source |
@@ -69,6 +74,9 @@
 | Description | Source |
 |-----|-----|
 | Troubleshooting | https://forums.raspberrypi.com/viewtopic.php?t=368673 |
+| Taking a picture w/ libcamera | https://forums.raspberrypi.com/viewtopic.php?t=344092 |
+| Live Feed | https://github.com/shashank-shark/rasp-live-feed-flask |
+| libcamera-vid info | https://youtu.be/JR1p1dwpT3I |
 ## Data Sources
 | Description | Source |
 |-----|-----|
