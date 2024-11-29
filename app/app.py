@@ -16,10 +16,6 @@ from matplotlib import pyplot as plt
 
 import classify
 
-n = 0 # this serves as an iterator that 
-	  # helps name images that are taken
-	  # and passed to the learning model
-
 app = Flask(__name__)
 
 #loading the model
@@ -79,4 +75,8 @@ def capture():
 
 # executable function
 if __name__ == '__main__':
+	n = 0 # this serves as an iterator that 
+	  # helps name images that are taken
+	  # and passed to the learning model
+	  
 	app.run(host='0.0.0.0', port=5000, debug=True)
