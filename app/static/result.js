@@ -10,11 +10,24 @@ var capture = $("#capture");
 // there to be text that says "the image 
 // you take will be displayed here."
 
-capture.click(function () {
+capture.click(async function takePicture() {
     $.ajax({
         url: "/capture",
         type: "post",
         success: function (response) {
+            capture.text("Taking picture...");
+            console.log(response);
+        }
+    })
+});
+
+capture.click(async function resetText() {
+    await takePicture();
+    $.ajax({
+        // url: "/capture",
+        type: "post",
+        success: function (response) {
+            capture.text("Take a picture!");
             console.log(response);
         }
     })
