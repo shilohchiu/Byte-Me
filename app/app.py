@@ -24,8 +24,9 @@ n = 0 # this serves as an iterator that
 	  # and passed to the learning model
 
 #loading the model
-model = load_model(os.path.join('models','melanomamodel.h5'))
-model.compile('adam', loss = tf.losses.BinaryCrossentropy(), metrics = ['accuracy'])
+model = classify.load_model()
+# model = load_model(os.path.join('models','melanomamodel.h5'))
+# model.compile('adam', loss = tf.losses.BinaryCrossentropy(), metrics = ['accuracy'])
 
 #directory to save the images and the logs
 os.makedirs('static/images', exist_ok=True)
@@ -75,6 +76,14 @@ def get_image_path():
 	global image_path
 	
 	return image_path
+
+@app.route('/classify', methods=['POST'])
+def classify():
+	global image_path
+	global model
+	
+	msg = classify.predict(model, classify.load_image(image_path))
+	return msg
 
 
 	# yield Response(x, mimetype='multiport/x-mixed-replace; boundary=frame')
