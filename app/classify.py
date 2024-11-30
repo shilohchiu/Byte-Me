@@ -11,7 +11,7 @@ from matplotlib import pyplot as plt
 # load in model is a function that takes no arguments and returns 
 # the rendered image classification model.
 def load_model(): 
-    return load_model(os.path.join('models','melanomamodel.h5'))
+    return tf.keras.models.load_model(os.path.join('models','melanomamodel.h5'))
 
 
 # load_image is a function that takes a string input 

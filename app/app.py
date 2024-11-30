@@ -78,7 +78,7 @@ def get_image_path():
 	return image_path
 
 @app.route('/classify', methods=['POST'])
-def classify():
+def _classify():
 	global image_path
 	global model
 	
