@@ -18,7 +18,7 @@ import classify
 
 app = Flask(__name__)
 
-image_path = ""
+image_path = "../static/images/default.jpg"
 n = 0 # this serves as an iterator that 
 	  # helps name images that are taken
 	  # and passed to the learning model
@@ -41,8 +41,8 @@ def read_log():
 #main page where it displays the live feed, result, and log
 @app.route('/')
 def index():
-	image_path = request.args.get("image_path")
-	#result = request.args.get("result", "")
+	# image_path = request.args.get("image_path")
+	# result = request.args.get("result", "")
 	return render_template('index.html', 
 						#result=result, 
 						log=read_log(),

@@ -26,28 +26,16 @@
 		<h1>Melanoma Detection Model</h1>
 
 			<h2>Capture</h2>
-			<button id = "capture"> Take a Picture! </button>
+			<div>
+				<button id = "capture"> Take a Picture! </button>
+			</div>
 
-			{% if image_path %}
 				<img id="preview" src= "../{{image_path}}" width="640" height="480" alt="Your image here.">
-			{% else %}
-				<p>Your image will be displayed here.</p>
-			{% endif %}
-
 
 			<h2>Classify</h2>
-			<button id = "Classify this?"> Classify! </button>
+			<button id = "classify"> Classify! </button>
 
-			{% if result %}
-				<h2>Predicted result: </h2>
-			{% else %}
-				<p>Your result will be displayed here! </p>
-			{% endif %}
-
-		<div class="log">
-			<h3>Past Screenings</h3>
 			
-		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js">

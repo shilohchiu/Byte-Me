@@ -1,7 +1,6 @@
 # Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Project Overview](#project-overview)
-  - [Team](#team)
   - [Goal](#goal)
   - [Hardware](#hardware)
   - [Software](#software)
@@ -15,15 +14,12 @@
 - [Sources](#sources)
   - [Deep Learning Sources](#deep-learning-sources)
   - [Flask Sources](#flask-sources)
+  - [JavaScript](#javascript)
   - [Camera Sources](#camera-sources)
   - [Data Sources](#data-sources)
   - [Other Sources](#other-sources)
 
 # Project Overview
-   ## Team
-   - **Lead Developer**: Shiloh Chiu
-   - **Project Manager**: Sophie Rummler
-   - **Hardware Technician**: Emily Sturgill
    ## Goal
     Our aim was to explore how advancements in deep learning can contribute to the biomedical field. To do this, we designed a prototype of a melanoma detection device using the Raspberry Pi 4 and a CNN model built in Tensorflow. Our prototype was designed with the intention of making a product that is both inexpensive and easy-to-use.
    ## Hardware
@@ -57,7 +53,8 @@
 - First, cd into the app directory (cd app).
 - `export FLASK_APP=app.py`
 - `flask run --host=0.0.0.0`
-- Run `` in the browser.
+- `hostname -I` to obtain IP address.
+- Run `<IP address>:5000` in the browser.
 # Sources
 ## Deep Learning Sources
 | Description | Source |
@@ -69,7 +66,14 @@
 | Image Classification with TensorFlow Tutorial | https://www.youtube.com/watch?v=jztwpsIzEGc&ab_channel=NicholasRenotte |
 | Early stopping in Tensorflow | https://docs.ultralytics.com/guides/model-training-tips/#early-stopping https://machinelearningmastery.com/how-to-stop-training-deep-neural-networks-at-the-right-time-using-early-stopping/ |
 ## Flask Sources
+| Description | Source |
+|-----|-----|
 | Flask image input | https://stackoverflow.com/questions/44926465/upload-image-in-flask |
+## JavaScript
+| Description | Source |
+|-----|-----|
+| Writing a sleep function | https://builtin.com/software-engineering-perspectives/javascript-sleep |
+| Asynchronus Functions | https://stackoverflow.com/questions/21518381/proper-way-to-wait-for-one-function-to-finish-before-continuing |
 ## Camera Sources
 | Description | Source |
 |-----|-----|

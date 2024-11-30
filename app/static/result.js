@@ -9,10 +9,10 @@ capture.click(function takePicture() {
             capture.text("Taking picture...")},
         success: async function (response) {
             capture.text("Image capture successful.");
+            changeImage();
             await sleep(2000);
             capture.text("Take a picture!");
             console.log(response);
-            changeImage();
         }
     })
 });
@@ -23,7 +23,7 @@ capture.click(function takePicture() {
         type: "post",
         success: function (response) {
             console.log(response);
-            preview.src = "../" + response; 
+            $("#preview").attr("src", "../" + response);
         } 
     })
 };
