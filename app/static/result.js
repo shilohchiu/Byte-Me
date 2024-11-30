@@ -1,14 +1,5 @@
 var capture = $("#capture");
-
-// at first, set the text of the button to 
-// try taking a picture
-
-// after taking a picture, set the text to 
-// just take a picture
-
-// where the image will be displayed, set 
-// there to be text that says "the image 
-// you take will be displayed here."
+var preview = $("#preview");
 
 capture.click(function takePicture() {
     $.ajax({
@@ -21,9 +12,21 @@ capture.click(function takePicture() {
             await sleep(2000);
             capture.text("Take a picture!");
             console.log(response);
+            changeImage();
         }
     })
 });
+
+    function changeImage() {
+    $.ajax({
+        url: "/get_image_path",
+        type: "post",
+        success: function (response) {
+            console.log(response);
+            preview.src = "../" + response; 
+        } 
+    })
+};
 
 // https://builtin.com/software-engineering-perspectives/javascript-sleep
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))

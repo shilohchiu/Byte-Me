@@ -18,6 +18,7 @@ import classify
 
 app = Flask(__name__)
 
+image_path = ""
 n = 0 # this serves as an iterator that 
 	  # helps name images that are taken
 	  # and passed to the learning model
@@ -40,11 +41,12 @@ def read_log():
 #main page where it displays the live feed, result, and log
 @app.route('/')
 def index():
-	result = request.args.get("result", "")
+	image_path = request.args.get("image_path")
+	#result = request.args.get("result", "")
 	return render_template('index.html', 
-						result=result, 
+						#result=result, 
 						log=read_log(),
-						message = "Try taking a picture!")
+						image_path = image_path)
 
 # The function capture is the function that runs when the 
 # capture button is clicked. it is responsible for taking 
@@ -55,21 +57,27 @@ def index():
 def capture():
 	# set the image path to a specific iteration
 	global n
+	global image_path
 	image_path = f"static/images/{n}.jpg"
 	n += 1
-	# set the text of the button to taking picture... please keep the device still...
 
 	# actually take the image
 	os.system("libcamera-still -o " + image_path)
 
-	with open(image_path, 'rb') as preview:
-		x = (b'--frame\r\n'
-			b'Content-Type: image/jpeg\r\n\r\n' + preview.read() + b'\r\n')
+	# with open(image_path, 'rb') as preview:
+	# 	x = (b'--frame\r\n'
+	# 		b'Content-Type: image/jpeg\r\n\r\n' + preview.read() + b'\r\n')
 		
-	# image text returns to normal
+	return redirect(url_for("index", image_path=image_path))
 
-	return Response(x, mimetype='multiport/x-mixed-replace; boundary=frame')
-	# return "ok"
+@app.route('/get_image_path', methods=['POST'])
+def get_image_path():
+	global image_path
+	
+	return image_path
+
+
+	# yield Response(x, mimetype='multiport/x-mixed-replace; boundary=frame')
 
 # @app.route('/classify') # used to be process
 # def classify_image():
@@ -88,5 +96,4 @@ def capture():
 
 # executable function
 if __name__ == '__main__':
-	
 	app.run(host='0.0.0.0', port=5000, debug=True)
