@@ -6,27 +6,26 @@
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <meta name = "author" content = "Shiloh Chiu">
         <meta name = "description" content = "Melanoma classification model designed with Tensorflow and RPi4.">
-        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="shortcut icon" href="static/images/favicon.png">
         <link rel="stylesheet"
-            href="css/custom.css?version=<?php print time(); ?>"
-            type="text/css">
+            href="static/css/custom.css">
     </head>
-    
+
     <body>
-        <section class="container">
-            <h1>Melanoma Detection Model</h1>
+        <!-- <section class="container"> -->
+            <h1>Melanoma Classification Model</h1>
     
                 <h2>Capture</h2>
-                <div>
+
                     <button id = "capture"> Take a Picture! </button>
-                </div>
-    
-                    <img id="preview" src= "../{{image_path}}" width="640" height="480" alt="Your image here.">
+
+                    <img id="preview" src= "../{{image_path}}" alt="Your image here.">
     
                 <h2>Classification</h2>
-                <button id = "classify">Classify</button>
-                <p id = "result"> Result will be displayed here. </p>		
-            </section>
+
+                    <button id = "classify">Classify</button>
+                    <p id = "result"> Result will be displayed here. </p>		
+        <!-- </section> -->
     
         <script src="https://code.jquery.com/jquery-3.5.1.min.js">
             let image_path = "{{ image_path }}";
