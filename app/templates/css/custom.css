@@ -1,0 +1,59 @@
+/*default styling for sections*/
+section{
+    padding: 3% 15% 3%;
+    margin: 8% 5% 8%;
+}
+
+/*general stuff*/
+
+:root{
+    --accent: rgb(40, 40, 40);
+    --text-size: 110%;
+}
+
+@font-face{
+    font-family: "league-spartan";
+    src: url("../fonts/league-spartan.ttf");
+}
+*{
+    font-family: "league-spartan", Helvetica, sans-serif;
+}
+cite{
+    font-size: xx-small;
+}
+
+@keyframes load{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body{
+    width: 90%;
+    margin: auto;
+}
+
+/* button styling */
+button{
+    color: white;
+    transition-duration: 0.5s;
+}
+button:hover{
+    border-bottom: solid var(--accent);
+}
+
+/* text styling */
+p{
+    color: var(--accent);
+    padding: 3%;
+    margin: 1%;
+    text-indent: 3%;
+}
+
+/* image styling */
+img{
+    display: block;
+}
