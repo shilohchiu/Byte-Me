@@ -51,6 +51,14 @@ body{
     margin: auto;
 }
 
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: auto;
+}
+
 /* button styling */
 button{
     background: none;
@@ -62,12 +70,15 @@ button{
 
     display: block;
     padding: 3% 3% 3%;
-    margin: auto;
+    
 }
 button:hover{
     border-bottom: solid var(--accent);
 }
 
+#classify{
+    margin: auto;
+}
 /* text styling */
 p{
     color: var(--accent);
