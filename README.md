@@ -91,3 +91,4 @@
 | Git in Visual Studio Code | https://superuser.com/questions/1423443/using-visual-studio-and-git-how-do-i-commit-a-new-folder-to-my-git-repository |
 | Replace depracated module | https://peps.python.org/pep-0594/#imghdr |
 | Installing OpenCV | https://raspberrypi-guide.github.io/programming/install-opencv |
+| Bash scripts | https://forums.raspberrypi.com/viewtopic.php?t=274658 |
