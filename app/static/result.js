@@ -19,7 +19,7 @@ capture.click(function takePicture() {
     })
 });
 
-test.click(function test() {
+test.click(function testPicture() {
     $.ajax({
         url: "/test",
         type: "post",
@@ -42,6 +42,8 @@ function changeImage() {
         type: "post",
         success: function (response) {
             console.log(response);
+            const result = document.getElementById("result");
+            result.textContent = "Result will be displayed here.";
             $("#preview").attr("src", "../" + response);
         } 
     })
