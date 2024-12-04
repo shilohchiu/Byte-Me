@@ -1,5 +1,6 @@
 var capture = $("#capture");
 var classify = $("#classify");
+var test = $("#test");
 var preview = $("#preview");
 
 capture.click(function takePicture() {
@@ -18,7 +19,24 @@ capture.click(function takePicture() {
     })
 });
 
-    function changeImage() {
+test.click(function test() {
+    $.ajax({
+        url: "/test",
+        type: "post",
+        beforeSend: function () {
+            test.text("Loading test image...")},
+        success: async function (response) {
+            await sleep(1000);
+            test.text("Image loaded.");
+            changeImage();
+            await sleep(2000);
+            test.text("Test");
+            console.log(response);
+        }
+    })
+});
+
+function changeImage() {
     $.ajax({
         url: "/get_image_path",
         type: "post",

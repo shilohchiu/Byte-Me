@@ -12,6 +12,9 @@ from keras.callbacks import EarlyStopping
 from tensorflow.keras.metrics import Precision, Recall, BinaryAccuracy
 from tensorflow.keras.models import load_model
 import os
+
+import random
+
 from matplotlib import pyplot as plt
 
 import classify
@@ -22,6 +25,11 @@ image_path = "../static/images/default.jpg"
 n = 0 # this serves as an iterator that 
 	  # helps name images that are taken
 	  # and passed to the learning model
+
+imgs = ["benigntest.jpg","malignanttest.jpg",
+		"benigntest1.jpg","malignanttest1.jpg",
+		"benigntest2.jpg","malignanttest2.jpg",
+		"benigntest3.jpg","malignanttest3.jpg"]
 
 #loading the model
 model = classify.load_model()
@@ -64,19 +72,29 @@ def capture():
 
 	# actually take the image
 	os.system("libcamera-still -o " + image_path)
-
-	# with open(image_path, 'rb') as preview:
-	# 	x = (b'--frame\r\n'
-	# 		b'Content-Type: image/jpeg\r\n\r\n' + preview.read() + b'\r\n')
 		
 	return redirect(url_for("index", image_path=image_path))
 
+# this function gives users the choice to use a test image 
+# to test the functionality of the learning model
+@app.route('/test', methods=['POST'])
+def test():
+	# set the image path to a random file in the test folder
+	global image_path
+	global imgs
+
+	image_path = "static/images/test/" + random.choice(imgs)
+		
+	return redirect(url_for("index", image_path=image_path))
+
+# getter for the image path
 @app.route('/get_image_path', methods=['POST'])
 def get_image_path():
 	global image_path
 	
 	return image_path
 
+# runs the image classification model
 @app.route('/classify', methods=['POST'])
 def _classify():
 	global image_path
